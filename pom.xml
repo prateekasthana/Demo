@@ -40,6 +40,19 @@
           <webappDirectory>/src/main/webapp</webappDirectory>
         </configuration>
       </plugin>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-clean-plugin</artifactId>
+		<version>3.0.0</version>
+		<configuration>
+			<followSymLinks>false</followSymLinks>
+        <filesets>
+            <fileset>
+				<directory>D:\Clean</directory>
+            </fileset>
+        </filesets>
+    </configuration>
+	</plugin>
     </plugins>
   </build>
 </project>
