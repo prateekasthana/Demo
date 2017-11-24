@@ -48,7 +48,7 @@
 			<followSymLinks>false</followSymLinks>
         <filesets>
             <fileset>
-				<directory>D:\Clean</directory>
+				<directory>D:\Clean\data</directory>
             </fileset>
         </filesets>
     </configuration>
