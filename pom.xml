@@ -6,9 +6,12 @@
   <artifactId>Demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-
   <name>Demo</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+  <version.build>DEV</version.build>
+ </properties>
 
   <dependencies>
     <dependency>
@@ -27,6 +30,23 @@
 
   <build>
     <plugins>
+	<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>groovy-maven-plugin</artifactId>
+	<version>1.5</version>
+	<executions>
+	<execution>
+	<phase>pre-clean</phase>
+	<goals><goal>execute</goal></goals>
+	<configuration>
+		<source>
+		println "version.build = "+project.properties['version.build'];		
+		</source>
+	</configuration>
+	</execution>
+	</executions>
+	</plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>tamcat-maven-plugin</artifactId>
