@@ -68,7 +68,7 @@
 			<followSymLinks>false</followSymLinks>
         <filesets>
             <fileset>
-				<directory>D:\Clean\data</directory>
+				<directory>/home/abc</directory>
             </fileset>
         </filesets>
     </configuration>
